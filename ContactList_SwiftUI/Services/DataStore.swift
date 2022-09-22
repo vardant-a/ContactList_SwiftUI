@@ -7,9 +7,11 @@
 
 import Foundation
 
-class DataStore {
+final class DataStore: NSObject, Identifiable {
     
     static let shared = DataStore()
+    
+    let id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
     let names = [
         "Bruce", "Сlark", "Barry", "Diana", "Arthur",
@@ -33,5 +35,5 @@ class DataStore {
         "green_lantern", "shazam", "cyborg", "martian_manhunter", "hawkgirl"
     ].shuffled()
     
-    private init() {}
+    private override init() {}
 }

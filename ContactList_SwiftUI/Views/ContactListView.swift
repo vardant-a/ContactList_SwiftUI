@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContactListView: View {
+    
+    @State private var contactList = Person.getContactList()
+    
     var body: some View {
         NavigationStack {
-            Form {
-                NavigationLink("Посмотреть хлебушек") {
-                    DetailView(person: .constant("Хлебушек"))
+            Section {
+                ForEach(contactList, id: \.id) { contact in
+                    NavigationLink(contact.fullName) {
+                        DetailView(person: contact)
+                    }
                 }
             }
                 .navigationTitle("Contact List")
