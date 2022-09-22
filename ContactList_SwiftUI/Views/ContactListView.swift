@@ -13,7 +13,7 @@ struct ContactListView: View {
     
     var body: some View {
         NavigationStack {
-            Section {
+            Form {
                 ForEach(contactList, id: \.id) { contact in
                     NavigationLink(contact.fullName) {
                         DetailView(person: contact)

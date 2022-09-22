@@ -53,9 +53,9 @@
 		0E53B37A28DCF70100D371FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E62CC7428DBA2140091DD03 /* NumberListView.swift */,
-				0E62CC7B28DBAA630091DD03 /* DetailView.swift */,
 				0E62CC7228DBA1300091DD03 /* ContactListView.swift */,
+				0E62CC7B28DBAA630091DD03 /* DetailView.swift */,
+				0E62CC7428DBA2140091DD03 /* NumberListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

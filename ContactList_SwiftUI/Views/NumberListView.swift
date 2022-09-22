@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct NumberListView: View {
-    @State private var persons = Person.getContactList()
+    @State private var contactList = Person.getContactList()
     
     var body: some View {
         NavigationStack {
             Form {
-//                ForEach(persons) { person in
-//                    /*@START_MENU_TOKEN@*/Text(person.name)/*@END_MENU_TOKEN@*/
-//                }
-                Section(header: Text(persons.first?.fullName ?? "user")) {
-                    HStack {
-                        Image(systemName: "phone")
-                        Text(persons.first?.number ?? "number not found")
-                    }
-                    HStack {
-                        Image(systemName: "tray")
-                        Text(persons.first?.email ?? "email not found")
+                ForEach(contactList, id: \.id) { contact in
+                    Section(header: Text(contact.fullName)) {
+                        HStack {
+                            Image(systemName: "phone")
+                            Text(contact.number)
+                        }
+                        HStack {
+                            Image(systemName: "tray")
+                            Text(contact.email)
+                        }
                     }
                 }
             }

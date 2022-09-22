@@ -13,7 +13,8 @@ struct DetailView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Image("")
+                Image("default")
+                    .frame(width: 125, height: 125)
                 HStack {
                     Image(systemName: "phone")
                     Text(person.number)
