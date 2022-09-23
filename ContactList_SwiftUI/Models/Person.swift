@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person {
+struct Person: Identifiable {
     
     let id: Int
     let firstName: String
@@ -27,7 +27,7 @@ struct Person {
         
         for index in 0..<count {
             let contact = Person(
-                id: DataStore.shared.id[index],
+                id: index,
                 firstName: DataStore.shared.names[index],
                 lastName: DataStore.shared.famyles[index],
                 number: DataStore.shared.numbers[index],

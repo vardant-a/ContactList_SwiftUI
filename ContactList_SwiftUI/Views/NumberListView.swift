@@ -13,7 +13,7 @@ struct NumberListView: View {
     var body: some View {
         NavigationStack {
             Form {
-                ForEach(contactList, id: \.id) { contact in
+                ForEach(contactList) { contact in
                     Section(header: Text(contact.fullName)) {
                         HStack {
                             Image(systemName: "phone")
