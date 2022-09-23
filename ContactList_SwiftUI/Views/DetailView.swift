@@ -14,22 +14,23 @@ struct DetailView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
                 Image("default")
                     .resizable()
                     .frame(width: height * 1.1, height: height)
                     .cornerRadius(20)
                 
-                HStack {
-                    Image(systemName: "phone")
-                    Text(person.number)
+                Form {
+                    
+                    HStack {
+                        Image(systemName: "phone")
+                        Text(person.number)
+                    }
+                    
+                    HStack {
+                        Image(systemName: "tray")
+                        Text(person.email)
+                    }
                 }
-                
-                HStack {
-                    Image(systemName: "tray")
-                    Text(person.email)
-                }
-            }
             .navigationTitle(person.fullName)
         }
     }
