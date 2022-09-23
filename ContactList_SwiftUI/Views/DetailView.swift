@@ -19,7 +19,7 @@ struct DetailView: View {
                     .frame(width: height * 1.1, height: height)
                     .cornerRadius(20)
                 
-                Form {
+                List {
                     
                     HStack {
                         Image(systemName: "phone")
