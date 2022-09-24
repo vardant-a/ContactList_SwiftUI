@@ -12,8 +12,7 @@ struct NumberListView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contactList) { contact in
+            List(contactList) { contact in
                     Section(header: Text(contact.fullName)) {
                         HStack {
                             Image(systemName: "phone")
@@ -25,7 +24,6 @@ struct NumberListView: View {
                         }
                     }
                 }
-            }
             .navigationTitle("Contact List")
         }
     }

@@ -13,13 +13,11 @@ struct ContactListView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contactList) { contact in
+            List(contactList) { contact in
                     NavigationLink(contact.fullName) {
                         DetailView(person: contact)
                     }
                 }
-            }
                 .navigationTitle("Contact List")
         }
     }
