@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NumberListView: View {
-    @State private var contactList = Person.getContactList()
+    private let contactList = Person.getContactList()
     
     var body: some View {
         NavigationStack {

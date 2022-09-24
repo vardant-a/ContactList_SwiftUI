@@ -22,8 +22,10 @@ struct Person: Identifiable {
     static func getContactList() -> [Person] {
         var contactList: [Person] = []
         
-        let count = min(DataStore.shared.names.count, DataStore.shared.famyles.count, DataStore.shared.numbers.count,
-                        DataStore.shared.emails.count)
+        let count = min(
+            DataStore.shared.names.count, DataStore.shared.famyles.count,
+            DataStore.shared.numbers.count, DataStore.shared.emails.count
+        )
         
         for index in 0..<count {
             let contact = Person(

@@ -14,13 +14,11 @@ struct DetailView: View {
     
     var body: some View {
         NavigationStack {
-                Image("default")
-                    .resizable()
-                    .frame(width: height * 1.1, height: height)
-                    .cornerRadius(20)
-                
                 List {
-                    
+                    Image("default")
+                        .resizable()
+                        .frame(width: height * 1.1, height: height)
+                        .cornerRadius(20)
                     HStack {
                         Image(systemName: "phone")
                         Text(person.number)
@@ -38,6 +36,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(person: Person.init(id: 1, firstName: "title", lastName: "last", number: "1", email: "3"))
+        DetailView(person: Person.getContactList().first!)
     }
 }
